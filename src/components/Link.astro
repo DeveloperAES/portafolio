@@ -1,37 +1,44 @@
 ---
 interface Props {
-    href: string;
-    acction?: boolean;
-    target?: boolean;
+  href?: string;
+  action?: boolean;
+  target?: boolean;
 }
-
-const { href, acction, target } = Astro.props;
+const { href = "#", action = false, target = false } = Astro.props;
 ---
-<a href={href} class:list={[acction ? 'action' : '']} target={target ? '_blank' : ''}>
-    <slot />
+<a 
+  href={href} 
+  class:list={[
+    action ? 'action' : '',
+    target ? 'external' : ''
+  ].filter(Boolean).join(' ')}
+>
+  <slot />
 </a>
 
 <style>
-    a {
-        color: var(--text-color);
-        text-decoration: none;
-        background: var(--background-transparent);
-        padding: 0.5rem;
-        margin-top: 10px;
-        border-radius: 25px;
-        min-width: 150px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        transition: background-color 0.7s ease;
-        &:hover {
-            background: var(--gradient-style-3);
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        }
-    }
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  background: var(--background-transparent);
+  padding: 0.5rem;
+  margin-top: 10px;
+  border-radius: 25px;
+  min-width: 150px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.7s ease;
+  
+  &:hover {
+    background: var(--gradient-style-3);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 
+                0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+}
 
-    .action {
-        background: var(--accent-color);
-    }
+.action {
+  background: var(--accent-color);
+}
 </style>

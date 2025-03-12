@@ -4,124 +4,142 @@ import Hexagon from "../../icons/Hexagon.astro";
 import Mail from "../../icons/Mail.astro";
 import Link from "../../Link.astro";
 import Profile from "../../Profile.astro";
+
 ---
 <section id="hero">
-    <div id="about-home">
-        <Profile />
-        <div class="content">
-            <h1>
-                I'm <span class="highlight">Freelance</span> Web Developer 
-            </h1>
-            <p>
-                I'm José Luis B. Leyva, I have 5 years as a freelance developer with technologies like Javascript, Typescript, PHP, HTML, CSS, Wordprees and more.
-            </p>
-            <div class="contact">
-        
-                <Link href="#" >
-                    <Download />
-                    CV
-                </Link>
-                <Link href="mailto:luisstron45@gmail.com"  acction>
-                    <Mail />
-                    Contact 
-                </Link>
-            </div>
-        </div>
+  <div id="about-home">
+    <Profile />
+    <div class="content">
+      <h1>
+        <span class="highlight">Desarollador Web</span>
+      </h1>
+      <p>
+        ¡Hola! Soy Anderson Espinoza, desarrollador web apasionado por crear
+        sitios funcionales y atractivos. Me especializo en ofrecer soluciones
+        optimizadas, adaptadas a cada necesidad. La evolución constante de la
+        tecnología me motiva a seguir aprendiendo y mejorando. Creo en la
+        importancia de un diseño intuitivo y accesible, y siempre estoy abierto
+        a nuevos desafíos para crear soluciones innovadoras. Estas son algunas
+        de las tecnologías con las que he trabajado recientemente:
+        <strong>PHP, Wordpress, Woocommerce, Astro,
+        React.</strong>
+      </p>
+      <div class="contact">
+        <Link 
+          href="/Anderson_Espinoza_CV_2025.pdf" 
+            target="_blank"
+          download="Anderson_Espinoza_CV_2025.pdf"
+        >
+          <Download />
+          CV
+        </Link>
+        <Link 
+          href="mailto:aespinozaanco38@gmail.com" 
+          action
+        >
+          <Mail />
+          Contáctame
+        </Link>
+      </div>
     </div>
+  </div>
 </section>
 
 <style>
-    #hero {
-        position: relative;
-    }
+#hero {
+  position: relative;
+}
 
-    #about-home {
-        display: flex;
-        flex-direction: row;
-        gap: 4rem;
-        padding-top: 200px;
-    }
+#about-home {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  padding-top: 200px;
+}
 
-    .contact {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 1rem;
-    }
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+}
 
-    .content {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-    h1 {
-        margin: 0;
-        font-family: 'Exo 2 Variable', sans-serif;
-        font-size: 57px;
-        max-width: 500px;
-        text-wrap: balance;
-    }
+h1 {
+  margin: 0;
+  font-family: "Exo 2 Variable", sans-serif;
+  font-size: 57px;
+  max-width: 500px;
+  text-wrap: balance;
+}
 
-    p {
-        margin: 0;
-        font-size: 1.3rem;
-        font-weight: 300;
-        line-height: 1.5;
-        max-width: 600px;
-    }
+p {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 600px;
+}
 
-    .hexagon {
-        position: absolute;
-        top : 100px;
-        left: -100px;
-        z-index: -100;
-        filter: blur(3px);
-        opacity: 0.7;
-    }
-    .hexagon::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-left: 100px solid transparent;
-        border-right: 100px solid transparent;
-        border-bottom: 200px solid #70f5f2;
-    }
-    @media (max-width: 800px) {
-        #hero {
-            height: 100dvh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.hexagon {
+  position: absolute;
+  top: 100px;
+  left: -100px;
+  z-index: -100;
+  filter: blur(3px);
+  opacity: 0.7;
+}
 
-        #about-home {
-            flex-direction: column;
-            padding-top: 0;
-            gap: 4rem;
-        }
+.hexagon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid #70f5f2;
+}
 
-        .content {
-            justify-content: center;
-            align-items: center;
-        }
-        .contact {
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
+@media (max-width: 800px) {
+  #hero {
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-        p {
-            text-align: center;
-            font-size: 1rem;
-        }
+  #about-home {
+    flex-direction: column;
+    padding-top: 0;
+    gap: 4rem;
+  }
 
-        h1 {
-            font-size: 30px;
-            text-align: center;
-        }
-    }
+  .contact {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .content {
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
 </style>

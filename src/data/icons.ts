@@ -13,6 +13,12 @@ export const iconsTags = {
     "htmx": "skill-icons:htmx-light",
     "cloudflare workers": "devicon:cloudflareworkers",
     "sqlite": "vscode-icons:file-type-sqlite",
+    "wordpress": "logos:wordpress-icon-alt",
+    "woocommerce":"logos:woocommerce-icon",
+    "mysql": "logos:mysql",
+    "sass": "logos:sass",
+    "tail": "logos:tailwindcss-icon",
+    "query": "logos:react-query-icon",
     
     // Menu Icons
     "projects": "tdesign:code",
